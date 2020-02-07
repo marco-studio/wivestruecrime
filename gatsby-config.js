@@ -1,8 +1,21 @@
 module.exports = {
   siteMetadata: {
-    title: `Ask your dog guru`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `Ask your dog guru`,
+    title: `Default Title`,
+    description: ``,
+    author: `default author`,
+    twitter: ``,
+    instagram: ``,
+    facebook: ``,
+    youtube: ``,
+    apple: `https://www.google.com`,
+    stitcher: ``,
+    google: ``,
+    pocket: ``,
+    spotify: ``,
+    overcast: ``,
+    castbox: ``,
+    castro: ``,
+    podbean: ``
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,8 +23,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -25,9 +38,9 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         // icon: `https://pbcdn1.podbean.com/imglogo/image-logo/2144795/26850174_531238480575311_1377019303222901017_o_1_.png`, // This path is relative to the root of the site.
-        icon: `src/images/logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png` // This path is relative to the root of the site.
         // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
+      }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
@@ -44,18 +57,18 @@ module.exports = {
         // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
         parserOption: {
           customFields: {
-            channel: ["title", "image"],
+            channel: ["title", "image"]
             // item: ["itunes:summary"],
             // item: ["itunes:image", "img"],
-          },
-        },
-      },
+          }
+        }
+      }
     },
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
-        postCssPlugins: [require(`tailwindcss`)],
-      },
-    },
-  ],
-}
+        postCssPlugins: [require(`tailwindcss`)]
+      }
+    }
+  ]
+};

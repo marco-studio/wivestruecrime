@@ -1,15 +1,16 @@
-import React, { useState, useEffect, useRef } from "react"
-import { Link, graphql } from "gatsby"
-import albumStyle from "../components/album.module.css"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React, { useState, useEffect, useRef } from "react";
+import { Link, graphql } from "gatsby";
+import albumStyle from "../components/album.module.css";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import WhereToListenSmall from "../components/WhereToListenSmall"
-import WhereToListen from "../components/WhereToListenToUs"
-import logo from "../images/logo.png"
+import WhereToListenSmall from "../components/WhereToListenSmall";
+import WhereToListen from "../components/WhereToListenToUs";
+import SupportUs from "../components/SupportUs";
+import logo from "../images/logo.png";
 
 export default ({ data }) => {
-  const post = data.feedGatsbyBlog
+  const post = data.feedGatsbyBlog;
 
   return (
     <Layout>
@@ -67,60 +68,8 @@ export default ({ data }) => {
         />
       </div>
 
-      {/* <div className="w-full bg-gray-100 text-center pb-8 mt-20 lg:pb-10">
-        <div className="max-w-lg m-auto">
-          <div className="pt-8 font-medium text-xl text-gray-900 lg:text-2xl lg:pt-10 ">
-            Support Us
-          </div>
-          <div className="font-medium text-gray-700 leading-relaxed pl-8 pr-8 mt-6 md:mt-8 lg:text-xl lg:font-normal lg:text-gray-800 lg:leading-normal">
-            Support this podcast on Patreon and get exclusive, premium content
-            and bonuses for as little as $1 a month!
-          </div>
-          <div className="font-medium text-gray-700 leading-relaxed pl-8 pr-8 mt-6 lg:text-xl lg:font-normal lg:text-gray-800 lg:leading-normal">
-            This includes ad-free early released episodes, unreleased
-            recordings, LIVE Q & A's with Victoria, videos, and other perks{" "}
-          </div>
-          <div className="flex justify-center md:mt-8">
-            <a
-              href="https://www.patreon.com/bePatron?u={their user id}"
-              data-patreon-widget-type="become-patron-button"
-            >
-              <img
-                src="https://c5.patreon.com/external/logo/become_a_patron_button.png"
-                alt="pateron button"
-                className="mt-6"
-              />
-            </a>
-          </div>
-        </div>
-      </div> */}
-
       <div className="w-full bg-gray-100 text-center pb-8 md:pb-16 mt-12">
-        <div className="max-w-lg md:max-w-xl m-auto lgx:max-w-2xl">
-          <div className="pt-8 font-medium text-xl text-gray-900 md:font-semibol md:text-3xl md:pt-16">
-            Support Us
-          </div>
-          <div className="font-medium text-gray-700 leading-relaxed pl-8 pr-8 mt-6 md:mt-12 md:text-xl">
-            Support this podcast on Patreon and get exclusive, premium content
-            and bonuses for as little as $1 a month!
-          </div>
-          <div className="font-medium text-gray-700 leading-relaxed pl-8 pr-8 mt-6 md:text-xl">
-            This includes ad-free early released episodes, unreleased
-            recordings, LIVE Q & A's with Victoria, videos, and other perks{" "}
-          </div>
-          <div className="flex justify-center md:mt-10">
-            <a
-              href="https://www.patreon.com/askyourdogguru"
-              data-patreon-widget-type="become-patron-button"
-            >
-              <img
-                src="https://c5.patreon.com/external/logo/become_a_patron_button.png"
-                alt="pateron button"
-                className={`mt-6 ${albumStyle.podcastBox}`}
-              />
-            </a>
-          </div>
-        </div>
+        <SupportUs />
       </div>
 
       <div className="pt-8 font-medium text-xl text-gray-900 lg:text-2xl lg:pt-10 max-w-lg m-auto text-center mb-4 mt-16">
@@ -142,8 +91,8 @@ export default ({ data }) => {
         </audio>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query($slug: String!) {
@@ -166,34 +115,34 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 function formatDate(dateString) {
-  return dateString.substring(4, 16)
+  return dateString.substring(4, 16);
 }
 
 function formatTime(timeString) {
-  var pieces = timeString.split(":")
-  var hour, minute, second
-  var time
+  var pieces = timeString.split(":");
+  var hour, minute, second;
+  var time;
 
-  console.log(pieces)
+  console.log(pieces);
   if (pieces.length === 3) {
-    hour = parseInt(pieces[0], 11)
-    minute = parseInt(pieces[1], 10)
-    second = parseInt(pieces[2], 10)
+    hour = parseInt(pieces[0], 11);
+    minute = parseInt(pieces[1], 10);
+    second = parseInt(pieces[2], 10);
 
-    time = `${hour} hr ${minute} min`
+    time = `${hour} hr ${minute} min`;
   } else {
-    minute = parseInt(pieces[0], 10)
-    time = `${minute} min `
+    minute = parseInt(pieces[0], 10);
+    time = `${minute} min `;
   }
 
-  return time
+  return time;
 }
 
 function handleScroll() {
-  console.log("Scrollling fefewfe ")
+  console.log("Scrollling fefewfe ");
 }
 
 {
