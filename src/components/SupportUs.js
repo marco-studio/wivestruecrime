@@ -9,15 +9,15 @@ const SupportUs = () => (
       </div>
       <div className="font-medium text-gray-700 leading-relaxed pl-8 pr-8 mt-6 md:mt-12 md:text-xl">
         Support this podcast on Patreon and get exclusive, premium content and
-        bonuses for as little as $1 a month!
+        bonuses for as little as the price of a cup off coffee a month!
       </div>
       <div className="font-medium text-gray-700 leading-relaxed pl-8 pr-8 mt-6 md:text-xl">
         This includes ad-free early released episodes, unreleased recordings,
-        LIVE Q & A's with Victoria, videos, and other perks{" "}
+        videos, and other perks
       </div>
       <div className="flex justify-center md:mt-10">
         <a
-          href="https://www.patreon.com/askyourdogguru"
+          href="https://www.patreon.com/"
           data-patreon-widget-type="become-patron-button"
         >
           <img

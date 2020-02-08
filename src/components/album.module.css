@@ -43,6 +43,13 @@
   /* padding-right: 16px; */
 }
 
+.newsletter {
+  -webkit-appearance: none;
+  /* box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.13); */
+  box-shadow: 0 15px 35px 0 rgba(42, 51, 83, 0.12),
+    0 5px 15px rgba(0, 0, 0, 0.06) !important;
+}
+
 @media (min-width: 1024px) {
   .player {
     padding-bottom: 32px;
@@ -58,12 +65,14 @@
   transform: skewY(-7deg);
   -webkit-transform-origin: 0;
   transform-origin: 0;
-  /* background: linear-gradient(150deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%); */
+  /* background: linear-gradient(150deg, #53f 15%, #05d5ff 70%, #a6ffcb 94%); */
   /* background: aliceblue; */
-  /* background: #edf2f7; */
+  background: #edf2f7;
   /* background: rgb(10, 51, 67); */
   /* background: rgb(3, 152, 149); */
-  background: rgb(6, 136, 142);
+  /* background: rgb(6, 136, 142); */
+
+  /* background: rgb(65, 143, 153); */
 }
 
 .footer {

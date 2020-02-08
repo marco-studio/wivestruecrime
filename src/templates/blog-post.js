@@ -7,6 +7,7 @@ import SEO from "../components/seo";
 import WhereToListenSmall from "../components/WhereToListenSmall";
 import WhereToListen from "../components/WhereToListenToUs";
 import SupportUs from "../components/SupportUs";
+import Newsletter from "../components/Newsletter";
 import logo from "../images/logo.png";
 
 export default ({ data }) => {
@@ -28,7 +29,7 @@ export default ({ data }) => {
             alt="pod hero"
             className={`rounded-lg ${
               albumStyle.shadowSmall
-            } w-20 h-20 md:w-40 md:h-40`}
+            } w-20 h-20 md:w-40 md:h-40 min-w-5`}
           />
         </Link>
         <div className="ml-4 md:ml-6">
@@ -64,10 +65,13 @@ export default ({ data }) => {
         </div>
         <div
           className="lg:text-xl"
-          dangerouslySetInnerHTML={{ __html: post.content.encoded }}
+          dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </div>
 
+      <div className="text-center p-8 max-w-md md:max-w-lg m-auto mt-8 lg:max-w-xl lgx:max-w-2xl lgx:mt-16">
+        <Newsletter />
+      </div>
       <div className="w-full bg-gray-100 text-center pb-8 md:pb-16 mt-12">
         <SupportUs />
       </div>
@@ -101,7 +105,7 @@ export const query = graphql`
     feedGatsbyBlog(id: { eq: $slug }) {
       title
       pubDate
-      contentSnippet
+      content
       itunes {
         duration
         image
@@ -109,9 +113,6 @@ export const query = graphql`
       }
       enclosure {
         url
-      }
-      content {
-        encoded
       }
     }
   }
@@ -143,83 +144,4 @@ function formatTime(timeString) {
 
 function handleScroll() {
   console.log("Scrollling fefewfe ");
-}
-
-{
-  /* <div className="hidden lg:hidden">
-<ul className="flex justify-around max-w-2xl ml-auto mr-auto mdx:max-w-3xl mt-12">
-  <li className="flex">
-    <button
-      className={`py-6 px-6 rounded-lg inline-flex items-center ${
-        albumStyle.podcastBox
-      } mdx:min-w-220 `}
-    >
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Podcasts_%28iOS%29.svg"
-        alt="apple"
-        className="w-8"
-      />
-      <span className="ml-3">Apple Podcast</span>
-    </button>
-  </li>
-  <li className="flex">
-    <button
-      className={`py-6 px-6 rounded-lg inline-flex items-center ${
-        albumStyle.podcastBox
-      } mdx:min-w-220`}
-    >
-      <img
-        src="https://www.svgrepo.com/show/135807/soundcloud.svg"
-        alt="apple"
-        className="w-8"
-      />
-      <span className="ml-3">Apple Podcast</span>
-    </button>
-  </li>
-  <li className="flex">
-    <button
-      className={`py-6 px-6 rounded-lg inline-flex items-center ${
-        albumStyle.podcastBox
-      } mdx:min-w-220`}
-    >
-      <img
-        src="https://cdn.worldvectorlogo.com/logos/google-podcasts.svg"
-        alt="apple"
-        className="w-8"
-      />
-      <span className="ml-3">Apple Podcast</span>
-    </button>
-  </li>
-</ul>
-<ul className="flex justify-center max-w-2xl ml-auto mr-auto pt-6">
-  <li className="flex mr-3">
-    <button
-      className={`py-6 px-6 rounded-lg inline-flex items-center ${
-        albumStyle.podcastBox
-      }`}
-    >
-      <img
-        src="https://cdn.worldvectorlogo.com/logos/google-podcasts.svg"
-        alt="apple"
-        className="w-8"
-      />
-      <span className="ml-3">Apple Podcast</span>
-    </button>
-  </li>
-  <li className="flex ml-3">
-    <button
-      className={`py-6 px-6 rounded-lg inline-flex items-center ${
-        albumStyle.podcastBox
-      }`}
-    >
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
-        alt="apple"
-        className="w-8"
-      />
-      <span className="ml-3">Apple Podcast</span>
-    </button>
-  </li>
-</ul>
-</div> */
 }

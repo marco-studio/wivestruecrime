@@ -22,7 +22,7 @@ module.exports = {
       // => @media (min-width: 1024px) { ... }
       lgx: "1152px",
 
-      xl: "1280px",
+      xl: "1280px"
       // => @media (min-width: 1280px) { ... }
     },
     minWidth: {
@@ -33,6 +33,7 @@ module.exports = {
       full: "100%",
       "220": "220px",
       "768": "768px",
+      "5": "5rem"
     },
     // maxWidth: {
     //   "960": "960px",
@@ -52,16 +53,16 @@ module.exports = {
       width: {
         "335": "335px",
         "275": "275px",
-        "250": "250px",
+        "250": "250px"
       },
       height: {
         "335": "335px",
         "275": "275px",
-        "250": "250px",
+        "250": "250px"
       },
       maxWidth: {
-        "960": "960px",
-      },
-    },
-  },
-}
+        "960": "960px"
+      }
+    }
+  }
+};
