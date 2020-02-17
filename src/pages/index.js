@@ -281,7 +281,7 @@ const IndexPage = ({ data }) => {
           <div className="flex justify-center mt-16 lgx:max-w-960 lgx:mx-12">
             <button
               onClick={() => setCount(count + 5)}
-              className="bg-teal-500 text-white font-bold py-3 px-8 rounded"
+              className={`{albumStyles.footer} text-white font-bold py-3 px-8 rounded`}
             >
               <span>Load More</span>
             </button>
